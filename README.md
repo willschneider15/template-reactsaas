@@ -92,18 +92,15 @@ npm run dev
 git init
 git remote add origin <your-github-url>
 git branch -M main
+git add .
+git commit -m 'Adding the template code to my repo'
 git push -u origin main
 ```
 
 6. Create shareable URLs for your web application, synced with Github.
    - Import your Git Repository into Vercel: [https://vercel.com/new](https://vercel.com/new)
      - You will need the Vercel application added to your Github account
-
-7. In Vercel under Project > Settings > Environment Variables
-   - Click the import .env button and select the updated `.env.local` file in your project.
-
-8. Now if you redeploy in Vercel you should see a deployed URL for your project. 
-   - Also when you push new commits to Github it should sync those changes to deployed URLs. 
+     - Then copy and paste your environment variables from `.env.local` in before you click deploy
 
 ## Firebase Install Stripe Plugin
 ### Take your time Stripe is the hardest part to setup
