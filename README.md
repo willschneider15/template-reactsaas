@@ -29,7 +29,7 @@
 cd  <project-directory>
 ```
 
-1. Go to env.example get the vars you need, and change the file name to .env.local
+2. Go to env.example get the vars you need, and change the file name to .env.local
 - This will require creating a [Firebase](https://firebase.google.com/) account
 - Create the Firebase Project for your apps resources
 - You will then click: Project Overview > Add app > Then copy those values
