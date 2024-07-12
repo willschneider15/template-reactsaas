@@ -1,4 +1,4 @@
-<img width="600" alt="diagram" src="https://github.com/willschneider15/nextsaas/assets/44822021/ca6be7df-b0ea-4d63-93d3-04aed60a7d29)"/>
+<img width="600" alt="diagram" src="https://github.com/willschneider15/nextsaas/assets/44822021/ca6be7df-b0ea-4d63-93d3-04aed60a7d29"/>
 
 ## Features
 
