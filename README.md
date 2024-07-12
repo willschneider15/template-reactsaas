@@ -22,18 +22,14 @@
 
 ## Getting Started
 
-1. Fork the template repo on Github: https://github.com/willschneider15/reactsaas
-<screenshot>
+1. Download the template locally from Github: [https://github.com/willschneider15/reactsaas](https://github.com/willschneider15/reactsaas)
+   - Update the directory name for the downloaded code to your project name
 
-1. Import your project into Vercel, you will need the Vercel application added in Github
+```bash
+cd  <project-directory>
+```
 
-2. On Vercel find the associated Github repository and clone it down locally:
-`$ git clone <repo-url>`
-
-1. Navigate to the local project:
-`$ cd <repo-name>`
-
-1. Go to env.example get the vars you need, and change the file name to .env.local
+2. Go to env.example get the vars you need, and change the file name to .env.local
 - This will require creating a [Firebase](https://firebase.google.com/) account
 - Create the Firebase Project for your apps resources
 - You will then click: Project Overview > Add app > Then copy those values
@@ -79,25 +75,37 @@ service cloud.firestore {
 }
 ```
 
-5. Run the development server:
+3. Run the development server:
 
 ```bash
 npm i
 npm run dev
 ```
 
-6. Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
+
+5. Add version control and save your progress on Github:
+   - Create a Github Repo: [https://github.com/new](https://github.com/new)
+   - Initialize the code with Git then push it to Github:
+
+```bash
+git init
+git remote add origin <your-github-url>
+git branch -M main
+git push -u origin main
+```
+
+6. Create shareable URLs for your web application, synced with Github.
+   - Import your Git Repository into Vercel: [https://vercel.com/new](https://vercel.com/new)
+     - You will need the Vercel application added to your Github account
 
 7. In Vercel under Project > Settings > Environment Variables
    - Click the import .env button and select the updated `.env.local` file in your project.
 
 8. Now if you redeploy in Vercel you should see a deployed URL for your project. 
-   - Now when you push new commits to Github it should sync those changes to deployed URLs. 
+   - Also when you push new commits to Github it should sync those changes to deployed URLs. 
 
-## Firebase Setup
-To be expanded on if needed
-
-## Stripe Install Plugin
+## Firebase Install Stripe Plugin
 ### Take your time Stripe is the hardest part to setup
 1. Setup a stripe account
 2. Install the stripe plugin on your project and go thru the options
@@ -122,7 +130,7 @@ To be expanded on if needed
 
     9. Click Install extension
 
-## Stripe Configure Plugin
+## Firebase Configure Stripe Plugin
     1. Go to: Extensions > Run Payments with Stripe > Manage > How this extension works
     2. Ensure your security rules are in place
     3. Configure Stripe webhook, use extension endpoint URL, then copy/paste this or manually select events
@@ -174,7 +182,7 @@ To be expanded on if needed
     7. Update typings from dev_products to prod_products when ready to deploy
     8. Go here: https://dashboard.stripe.com/test/settings/billing/portal make sure to click Save and update if you want
 
-## Stripe Configure App
+## Configure Stripe in The Code
     1. Goto `stripe/config.ts then add pricingIDs and type
         - Controls which products are displayed in:
           - `components/payments/Pricing.tsx` : Pricing table on /pricing page
@@ -300,4 +308,3 @@ We want reinvest into the project by hiring professionals and or community membe
     - GCP
     - Azure
     - AWS
-

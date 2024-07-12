@@ -31,11 +31,19 @@ export default function Welcome() {
                     <ul className="space-y-4">
                         <li className="flex items-center gap-2">
                             <Checkbox id="got-running" defaultChecked />
-                            <Label htmlFor="got-running" className="text-md">You got the template running <b>congrats!</b></Label>
+                            <Label htmlFor="got-running" className="text-md">You got the template running locally <b>congrats!</b></Label>
                         </li>
                         <li className="flex items-center gap-2">
                             <Checkbox id="set-preferences" />
                             <Label htmlFor="set-preferences" className="text-md">Make sure you have correct Firestore rules added</Label>
+                        </li>
+                        <li className="flex items-center gap-2">
+                            <Checkbox id="github" />
+                            <Label htmlFor="github" className="text-md">Store and track your code on Github</Label>
+                        </li>
+                        <li className="flex items-center gap-2">
+                            <Checkbox id="deployment" />
+                            <Label htmlFor="deployment" className="text-md">Setup preferred deployment pipeline with Vercel, AWS, etc.</Label>
                         </li>
                         <li className="flex items-center gap-2">
                             <Checkbox id="stripe-plugin" />
