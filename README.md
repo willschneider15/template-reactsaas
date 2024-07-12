@@ -85,7 +85,7 @@ npm run dev
 4. Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
 
 5. Add version control and save your progress on Github:
-   - Create a Github Repo: [https://github.com/new](https://github.com/new)
+   - Create a private Github Repo: [https://github.com/new](https://github.com/new)
    - Initialize the code with Git then push it to Github:
 
 ```bash
