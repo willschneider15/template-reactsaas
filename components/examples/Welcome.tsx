@@ -4,6 +4,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Checkbox } from "@/components/ui/checkbox"
 import { Label } from "@/components/ui/label"
 import Link from "next/link"
+// TODO: Update review documentation link
 
 export default function Welcome() {
     return (
@@ -43,7 +44,7 @@ export default function Welcome() {
                         </li>
                         <li className="flex items-center gap-2">
                             <Checkbox id="deployment" />
-                            <Label htmlFor="deployment" className="text-md">Setup preferred deployment pipeline with Vercel, AWS, etc.</Label>
+                            <Label htmlFor="deployment" className="text-md">Setup deployment pipeline</Label>
                         </li>
                         <li className="flex items-center gap-2">
                             <Checkbox id="stripe-plugin" />
@@ -51,7 +52,7 @@ export default function Welcome() {
                         </li>
                         <li className="flex items-center gap-2">
                             <Checkbox id="stripe-config" />
-                            <Label htmlFor="stripe-config" className="text-md">Create Stripe products and paste in the pricingIDs into <b>stripe/config.ts</b></Label>
+                            <Label htmlFor="stripe-config" className="text-md">Create your Stripe products and paste their pricingIDs into <b>stripe/config.ts</b></Label>
                         </li>
                         <li className="flex items-center gap-2">
                             <Checkbox id="pricing-table" />
@@ -60,6 +61,22 @@ export default function Welcome() {
                         <li className="flex items-center gap-2">
                             <Checkbox id="test-examples" />
                             <Label htmlFor="test-examples" className="text-md">Review and test with Firebase and Stripe examples</Label>
+                        </li>
+                        <li className="flex items-center gap-2">
+                            <Checkbox id="create-app" />
+                            <Label htmlFor="create-app" className="text-md">Modify the template and add the business logic to create your SaaS</Label>
+                        </li>
+                        <li className="flex items-center gap-2">
+                            <Checkbox id="production" />
+                            <Label htmlFor="production" className="text-md">Deploy the working app on your production Firebase environment</Label>
+                        </li>
+                        <li className="flex items-center gap-2">
+                            <Checkbox id="dns" />
+                            <Label htmlFor="dns" className="text-md">Update your custom domain DNS settings to point to your app</Label>
+                        </li>
+                        <li className="flex items-center gap-2">
+                            <Checkbox id="marketing" />
+                            <Label htmlFor="marketing" className="text-md">Loop: (marketing -&gt; making money -&gt; customer feedback -&gt; improving app -&gt; marketing)</Label>
                         </li>
                     </ul>
                 </div>

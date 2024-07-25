@@ -186,6 +186,14 @@ git push -u origin main
           - `components/dashboard/settings/Billing.tsx`: Manage your purchases on /billing page
     2. Review and update your pricing table to match your needs: `components/payments/Pricing.tsx`
 
+## Going to production
+    1. Ensure you have tested and reviewed your application, marketing page, terms of service and privacy policy.
+    2. In the stripe dashboard make sure you have updated your branding and profile to use live payments.
+    3. Look into bill-capping and billing notification in your cloud providers
+       - Vercel: https://vercel.com/docs/pricing/spend-management#pausing-projects
+       - Firebase / GCP: https://medium.com/@steffenjanbrouwer/how-to-set-a-hard-payment-spending-cost-limits-for-google-cloud-platform-projects-d4fee7550d42 
+
+
 ## Important Files
 
 ### APP
