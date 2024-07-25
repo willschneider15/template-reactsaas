@@ -188,6 +188,8 @@ git push -u origin main
 
 ## Going to production
     1. Ensure you have tested and reviewed your application, marketing page, terms of service and privacy policy.
+      - Terms of service: <your-url>/#terms-of-service
+      - Privacy policy: <your-url>/#privacy-policy
     2. In the stripe dashboard make sure you have updated your branding and profile to use live payments.
     3. Look into bill-capping and billing notification in your cloud providers
        - Vercel: https://vercel.com/docs/pricing/spend-management#pausing-projects
@@ -210,6 +212,7 @@ git push -u origin main
 ### Components
 - `components/auth/GuardAccess.tsx` : Component used to protect child components from unauthenticated users
 - `components/auth/PaidAccess.tsx` : Component used to protect child components from unpaid users
+- `components/auth/ForgotPasswordModal.tsx` : Modal that pops up when a user clicks forgot password
 - `components/auth/Login.tsx` : The login component
 - `components/auth/SignUp.tsx` : The signup component
 - `components/auth/RouteUser.tsx`: Route logged in users to the dashboard page from landing, login, and signup pages
@@ -218,11 +221,14 @@ git push -u origin main
 - `components/dashboard/Sidebar.tsx` : Used to navigate
 - `components/dashboard/Header.tsx` : Shows the current page and user profile
 - `components/dashboard/NavLink.tsx` : Highlights the active link in the Sidebar
+- `components/legal/PrivacyPolicyModal.tsx` : Modal that has the privacy policy for your app
+- `components/legal/TermsOfServiceModal.tsx` : Modal that has the terms of service for your app
 - `components/examples/FirebasePosts.tsx` : Component for an example of how to do CRUD with Firestore
 - `components/examples/StripeTesting.tsx` : Component for an example of querying all the products in Stripe dynamically
 - `components/examples/Welcome.tsx` : Component to introduce developers to the template
 - `components/landing/Header.tsx` : Component for the header of the landing page
 - `components/landing/Hero.tsx` : Component for the hero of the landing page
+- `components/landing/Footer.tsx` : Component for the footer of the landing page
 - `components/payments/Pricing.tsx` : Component to view the pricing table
 - `components/ui` : Default from shadcn/ui
 

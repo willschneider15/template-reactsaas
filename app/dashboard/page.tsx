@@ -1,10 +1,14 @@
 "use client";
 
+import { selected_products } from "@/stripe/typings";
 import Sidebar from "@/components/dashboard/Sidebar";
 import Header from "@/components/dashboard/Header";
 import Welcome  from "@/components/examples/Welcome";
 import GuardAccess from "@/components/auth/GuardAccess";
-// TODO: Give example of rendering Welcome for paid and Pricing for unpaid
+import PaidAccess from "@/components/auth/PaidAccess";
+import Pricing from "@/components/payments/Pricing";
+
+const product_one = selected_products[0].pricingId; // This is the first product in your array
 
 export default function DashboardPage() {
     return (
@@ -16,6 +20,9 @@ export default function DashboardPage() {
                 <div className="flex flex-col">
                     <Header Name={"Dashboard"} />
                     <Welcome/>
+                    <PaidAccess pricingIds={['test']} unPaid={true}>
+                        <Pricing/>
+                    </PaidAccess>
                 </div>
             </div>
         </GuardAccess>

@@ -6,6 +6,7 @@ import Header from "@/components/dashboard/Header";
 import StripeTesting from "@/components/examples/StripeTesting";
 import PaidAccess from "@/components/auth/PaidAccess";
 import GuardAccess from "@/components/auth/GuardAccess";
+import Pricing from "@/components/payments/Pricing";
 
 const product_one = selected_products[0].pricingId;
 const product_two = selected_products[1].pricingId;
@@ -22,6 +23,10 @@ export default function ExamplePage() {
                 </div>
                 <div className="flex flex-col">
                     <Header Name={"Stripe Example"} />
+                    {/* Displays pricing if you have not paid for product_one in this case */}
+                    <PaidAccess pricingIds={[product_one]} unPaid={true}>
+                        <Pricing/>
+                    </PaidAccess>
                     {/* Dynamically displays all valid products and state if user is paid or not */}
                     <StripeTesting />
                     {/* One or more pricingIds={[product_one, ...]} and optional redirectLink */}

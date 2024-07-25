@@ -6,11 +6,12 @@ import { getActivePricing } from '@/stripe/pricing';
 type Props = React.PropsWithChildren<{
     redirectLink?: string;
     pricingIds: string[];
+    unPaid?: boolean;
 }>;
 
-export default function PaidAccess({ children, redirectLink, pricingIds }: Props) {
+export default function PaidAccess({ children, redirectLink, pricingIds, unPaid = false }: Props) {
     const router = useRouter();
-    const { authStatus, loading} = useAuthContext();
+    const { authStatus, loading } = useAuthContext();
     const [paymentLoading, setPaymentLoading] = useState(true);
     const [shouldRender, setShouldRender] = useState(false);
 
@@ -22,7 +23,9 @@ export default function PaidAccess({ children, redirectLink, pricingIds }: Props
                 const activePricing = await getActivePricing();
                 const allPaid = pricingIds.every(pricingId => activePricing.includes(pricingId));
                 
-                if (!allPaid) {
+                // Redirect link is only used if we are checking paid access 
+                // Not for unPaid access
+                if (unPaid ? allPaid : !allPaid) {
                     // If redirectLink is not provided, do not redirect just don't render the children
                     if (redirectLink) {
                         router.push(redirectLink);
@@ -36,7 +39,7 @@ export default function PaidAccess({ children, redirectLink, pricingIds }: Props
         if (authStatus !== 'initial') {
             checkPaymentStatus();
         }
-    }, [authStatus, pricingIds, redirectLink, router]);
+    }, [authStatus, pricingIds, redirectLink, unPaid, router]);
 
     if (loading || paymentLoading || authStatus === 'initial' || !shouldRender) {
         return null; // Prevent rendering until auth, payment status, and checks are determined
@@ -44,4 +47,3 @@ export default function PaidAccess({ children, redirectLink, pricingIds }: Props
 
     return <>{children}</>;
 }
-
