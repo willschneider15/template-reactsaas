@@ -6,7 +6,7 @@ import NavLink from "@/components/dashboard/NavLink";
 
 export default function Sidebar() {
     return (
-        <div className="bg-gray-100 lg:bg-gray-100/40 lg:border-r lg:block dark:bg-gray-800/40">
+        <div className="h-full overflow-y-auto bg-gray-100 lg:bg-gray-100/40 lg:border-r lg:block dark:bg-gray-800/40">
             <div className="flex flex-col gap-2">
                 <div className="flex h-[60px] items-center px-6">
                     <Link className="flex items-center gap-2 font-semibold" href="#">

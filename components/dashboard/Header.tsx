@@ -39,7 +39,7 @@ export default function Header(props: any) {
 	};
     
     return ( 
-        <header className="flex h-14 lg:h-[60px] items-center gap-4 border-b bg-gray-100/40 px-6 dark:bg-gray-800/40">
+        <header className="sticky top-0 z-10 flex h-14 lg:h-[60px] items-center border-b bg-gray-100/40 px-6 dark:bg-gray-800/40">
 			<div
 				className="z-20 text-2xl pb-1 pl-2 text-black rounded lg:hidden cursor-pointer"
 				onClick={toggleSidebar}
@@ -101,5 +101,4 @@ export default function Header(props: any) {
 		)}
         </header>
   );
-   
 }

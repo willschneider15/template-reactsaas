@@ -216,11 +216,12 @@ git push -u origin main
 - `components/auth/Login.tsx` : The login component
 - `components/auth/SignUp.tsx` : The signup component
 - `components/auth/RouteUser.tsx`: Route logged in users to the dashboard page from landing, login, and signup pages
-- `components/dashboard/settings/Billing.tsx` : Component to manage your purchases
-- `components/dashboard/settings/Security.tsx`: Component to update your password
+- `components/dashboard/Layout.tsx` : Combines the Sidebar and Header in a responsive dashboard layout
 - `components/dashboard/Sidebar.tsx` : Used to navigate
 - `components/dashboard/Header.tsx` : Shows the current page and user profile
 - `components/dashboard/NavLink.tsx` : Highlights the active link in the Sidebar
+- `components/dashboard/settings/Billing.tsx` : Component to manage your purchases
+- `components/dashboard/settings/Security.tsx`: Component to update your password
 - `components/legal/PrivacyPolicyModal.tsx` : Modal that has the privacy policy for your app
 - `components/legal/TermsOfServiceModal.tsx` : Modal that has the terms of service for your app
 - `components/examples/FirebasePosts.tsx` : Component for an example of how to do CRUD with Firestore

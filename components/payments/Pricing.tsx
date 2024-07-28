@@ -8,7 +8,7 @@ import createCheckoutSession from "@/stripe/createCheckoutSession"
 import Spinner from "@/components/ui/Spinner"; // Import Spinner component
 
 export default function Pricing() {
-    const [buttonLoading, setButtonLoading] = useState<string | null>(null); // Single loading state for buttons
+    const [ buttonLoading, setButtonLoading ] = useState<string | null>(null); // Single loading state for buttons
     const { user } = useAuthContext();
     const router = useRouter();
     const button_one = selected_products[0];
@@ -16,14 +16,14 @@ export default function Pricing() {
     // Create a checkout session for a given priceId
     const createCheckout = async (priceId: string, type: string) => {
         if (user) {
-          setButtonLoading(priceId);
-          const checkoutUrl = await createCheckoutSession(priceId, user.uid, type);
-          setButtonLoading(null);
-          if (checkoutUrl) router.push(checkoutUrl);
+            setButtonLoading(priceId);
+            const checkoutUrl = await createCheckoutSession(priceId, user.uid, type);
+            setButtonLoading(null);
+            if (checkoutUrl) router.push(checkoutUrl);
         } else {
-          router.push('/signup'); // User not logged in
+            router.push('/signup'); // User not logged in
         }
-      };
+    };
 
     return (
         <section className="w-full py-12 md:py-24 lg:py-32">

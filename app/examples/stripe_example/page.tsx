@@ -1,12 +1,10 @@
 "use client";
 
 import { selected_products } from "@/stripe/typings";
-import Sidebar from "@/components/dashboard/Sidebar";
-import Header from "@/components/dashboard/Header";
+import DashBoardLayout from "@/components/dashboard/Layout";
 import StripeTesting from "@/components/examples/StripeTesting";
 import PaidAccess from "@/components/auth/PaidAccess";
 import GuardAccess from "@/components/auth/GuardAccess";
-import Pricing from "@/components/payments/Pricing";
 
 const product_one = selected_products[0].pricingId;
 const product_two = selected_products[1].pricingId;
@@ -17,16 +15,7 @@ const product_two = selected_products[1].pricingId;
 export default function ExamplePage() {
     return (
         <GuardAccess>
-            <div className="grid min-h-screen w-full grid-cols-1 lg:grid-cols-[280px_1fr] overflow-hidden">
-                <div className="hidden lg:grid">
-                    <Sidebar />
-                </div>
-                <div className="flex flex-col">
-                    <Header Name={"Stripe Example"} />
-                    {/* Displays pricing if you have not paid for product_one in this case */}
-                    <PaidAccess pricingIds={[product_one]} unPaid={true}>
-                        <Pricing/>
-                    </PaidAccess>
+            <DashBoardLayout name="Stripe Example">
                     {/* Dynamically displays all valid products and state if user is paid or not */}
                     <StripeTesting />
                     {/* One or more pricingIds={[product_one, ...]} and optional redirectLink */}
@@ -34,8 +23,7 @@ export default function ExamplePage() {
                     <PaidAccess pricingIds={[product_one, product_two]}>
                         <h1 className="m-6 font-bold underline text-center">You have access to product one and two</h1>
                     </PaidAccess>
-                </div>
-            </div>
+            </DashBoardLayout>
         </GuardAccess>
     );
 }

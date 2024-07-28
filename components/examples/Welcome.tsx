@@ -14,7 +14,7 @@ export default function Welcome() {
                     <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">Welcome, Dev!</h2>
                     <p className="max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                         Explore the powerful features of our SaaS platform and unlock new possibilities for your business. Get
-                        started with our intuitive dashboard and streamline your workflows.
+                        started and launch in record time.
                     </p>
                     {/* Opens external link in new tab */}
                     <Link
@@ -44,7 +44,7 @@ export default function Welcome() {
                         </li>
                         <li className="flex items-center gap-2">
                             <Checkbox id="deployment" />
-                            <Label htmlFor="deployment" className="text-md">Setup deployment pipeline</Label>
+                            <Label htmlFor="deployment" className="text-md">Setup deployment pipeline in Vercel or similar</Label>
                         </li>
                         <li className="flex items-center gap-2">
                             <Checkbox id="stripe-plugin" />
