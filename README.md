@@ -22,7 +22,7 @@
 
 ## Getting Started
 
-1. Download the template locally from Github: [https://github.com/willschneider15/reactsaas](https://github.com/willschneider15/reactsaas)
+1. Download the template locally from your Dashboard
    - Update the directory name for the downloaded code to whatever you want
 
 ```bash
