@@ -101,6 +101,9 @@ git push -u origin main
    - Import your Git Repository into Vercel: [https://vercel.com/new](https://vercel.com/new)
      - You will need the Vercel application added to your Github account
      - Then copy and paste your environment variables from `.env.local` in before you click deploy
+      <img width="500" alt="Screenshot 2024-05-22 at 6 19 59 PM" src="https://github.com/willschneider15/nextsaas/assets/44822021/8df5bc79-8576-4eff-9cbf-39d48693f2a8">
+
+7. Start playing with creating new branches for version control
 
 ## Firebase Install Stripe Plugin
 ### Take your time Stripe is the hardest part to setup
@@ -190,14 +193,19 @@ git push -u origin main
     1. Ensure you have tested and reviewed your application, marketing page, terms of service and privacy policy.
       - Terms of service: <your-url>/#terms-of-service
       - Privacy policy: <your-url>/#privacy-policy
-    2. In the stripe dashboard make sure you have updated your branding and profile to use live payments.
-    3. Look into bill-capping and billing notification in your cloud providers
+    2. Create a prod environment to keep things separate for testing
+       - Create new Firebase project 
+       - Configure the stripe plugin again with your live webhook and products
+       - Add prod stripe product IDs to `stripe/config.ts`
+       - Add your prod .env vars to `env.local` and vercel env vars
+    3. In the stripe dashboard make sure you have updated your branding and profile to use live payments.
+    4. Look into bill-capping and billing notification in your cloud providers
        - Vercel: https://vercel.com/docs/pricing/spend-management#pausing-projects
-       - Firebase / GCP: https://medium.com/@steffenjanbrouwer/how-to-set-a-hard-payment-spending-cost-limits-for-google-cloud-platform-projects-d4fee7550d42 
-
+       - Firebase / GCP: https://medium.com/@steffenjanbrouwer/how-to-set-a-hard-payment-spending-cost-limits-for-google-cloud-platform-projects-d4fee7550d42
+    5. Merge all production code into your main branch
+    6. Update your custom domain DNS to point to your prod webapp
 
 ## Important Files
-
 ### APP
 - `app/page.tsx` : The landing page for marketing
 - `app/dashboard/page.tsx` : The dashboard page
@@ -251,17 +259,6 @@ git push -u origin main
 - `stripe/createPortal.ts` : Creates the temporary stripe link for users to manage their purchases
 - `stripe/pricing.ts` : Creates helper functions related to pricingIDs
 - `stripe/products.ts` : Creates helper functions related to productIDs
-
-
-## Deployment
-
-1. Include your environment variables in Vercel:
- <img width="500" alt="Screenshot 2024-05-22 at 6 19 59 PM" src="https://github.com/willschneider15/nextsaas/assets/44822021/8df5bc79-8576-4eff-9cbf-39d48693f2a8">
-
-2. Add all your changes to Github
-`$ git add . `
-`$ git commit -m <message>`
-`$ git push` - If it errors copy and paste suggestion
 
 ## Continue Building
 
