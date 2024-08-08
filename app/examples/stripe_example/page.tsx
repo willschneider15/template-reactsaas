@@ -3,7 +3,7 @@
 import { selected_products } from "@/stripe/typings";
 import DashBoardLayout from "@/components/dashboard/Layout";
 import StripeTesting from "@/components/examples/StripeTesting";
-import PaidAccess from "@/components/auth/PaidAccess";
+import PaidAccess from "@/components/payments/PaidAccess";
 import GuardAccess from "@/components/auth/GuardAccess";
 
 const product_one = selected_products[0].pricingId;

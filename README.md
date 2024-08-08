@@ -219,7 +219,7 @@ git push -u origin main
 
 ### Components
 - `components/auth/GuardAccess.tsx` : Component used to protect child components from unauthenticated users
-- `components/auth/PaidAccess.tsx` : Component used to protect child components from unpaid users
+- `components/payments/PaidAccess.tsx` : Component used to protect child components from unpaid users
 - `components/auth/ForgotPasswordModal.tsx` : Modal that pops up when a user clicks forgot password
 - `components/auth/Login.tsx` : The login component
 - `components/auth/SignUp.tsx` : The signup component

@@ -4,7 +4,7 @@ import { selected_products } from "@/stripe/typings";
 import DashBoardLayout from "@/components/dashboard/Layout";
 import Welcome  from "@/components/examples/Welcome";
 import GuardAccess from "@/components/auth/GuardAccess";
-import PaidAccess from "@/components/auth/PaidAccess";
+import PaidAccess from "@/components/payments/PaidAccess";
 import Pricing from "@/components/payments/Pricing";
 
 const product_one = selected_products[0].pricingId; // This is the first product in your array
