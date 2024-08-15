@@ -1,7 +1,9 @@
 import {dev_products, prod_products} from '@/stripe/config';
 
-// Change this to prod_products when ready to goto production
-export const selected_products = dev_products
+const isProduction = process.env.NEXT_PUBLIC_ENVIRONMENT === 'PROD';
+
+// Selects products from your config based on if in DEV or PROD
+export const selected_products = isProduction ? prod_products : dev_products;
 
 export type AddDocData = {
     price: string;

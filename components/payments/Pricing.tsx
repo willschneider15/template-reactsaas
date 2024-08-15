@@ -16,12 +16,12 @@ export default function Pricing() {
     // Create a checkout session for a given priceId
     const createCheckout = async (priceId: string, type: string) => {
         if (user) {
-          setButtonLoading(priceId);
-          const checkoutUrl = await createCheckoutSession(priceId, user.uid, type);
-          setButtonLoading(null);
-          if (checkoutUrl) router.push(checkoutUrl);
+            setButtonLoading(priceId);
+            const checkoutUrl = await createCheckoutSession(priceId, user.uid, type);
+            setButtonLoading(null);
+            if (checkoutUrl) router.push(checkoutUrl);
         } else {
-          router.push('/signup'); // User not logged in
+            router.push('/signup'); // User not logged in
         }
       };
 
@@ -63,7 +63,7 @@ export default function Pricing() {
                         </CardContent>
                         <CardFooter>
                             <Button
-                                className="w-full shadow-lg hover:shadow-green-500/50"
+                                className="w-full shadow-lg hover:shadow-blue-500/50"
                                 onClick={() => createCheckout(button_one.pricingId, button_one.type)}
                                 disabled={buttonLoading === button_one.pricingId}
                             >
@@ -73,35 +73,35 @@ export default function Pricing() {
                     </Card>
                     <Card className="flex flex-col justify-between">
                         <CardHeader> {/* Second product option */}
-                            <CardTitle>Scale</CardTitle>
+                            <CardTitle>Support</CardTitle>
                             <CardDescription>
-                                Get access to our trained AI to help you build.
+                                Get our help to launch your SaaS fast.
                             </CardDescription>
                         </CardHeader>
                         <CardContent className="grid gap-4">
-                            <div className="text-4xl font-bold">$29/month</div>
+                            <div className="text-4xl font-bold">$4,999/month</div>
                             <ul className="grid gap-2 text-sm">
                                 <li>
                                     <CheckIcon className="mr-2 inline-block h-4 w-4 text-green-500" />
-                                    Powered by OpenAI
+                                    Professional support
                                 </li>
                                 <li>
                                     <CheckIcon className="mr-2 inline-block h-4 w-4 text-green-500" />
-                                    Generates code
+                                    Weekly meetings available
                                 </li>
                                 <li>
                                     <CheckIcon className="mr-2 inline-block h-4 w-4 text-green-500" />
-                                    Specially trained
+                                    One request at a time
                                 </li>
                                 <li>
                                     <CheckIcon className="mr-2 inline-block h-4 w-4 text-green-500" />
-                                    24/7 customer support
+                                    Pause or cancel anytime
                                 </li>
                             </ul>
                         </CardContent>
                         <CardFooter>
                             <Button
-                                className="w-full shadow-lg hover:shadow-green-500/50"
+                                className="w-full shadow-lg hover:shadow-blue-500/50"
                                 onClick={() => createCheckout(button_two.pricingId, button_two.type)}
                                 disabled={buttonLoading === button_two.pricingId}
                             >

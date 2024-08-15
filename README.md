@@ -22,8 +22,8 @@
 
 ## Getting Started
 
-1. Download the template locally from Github: [https://github.com/willschneider15/reactsaas](https://github.com/willschneider15/reactsaas)
-   - Update the directory name for the downloaded code to your project name
+1. Download the template locally from your Dashboard
+   - Update the directory name for the downloaded code to whatever you want
 
 ```bash
 cd  <project-directory>
@@ -85,25 +85,25 @@ npm run dev
 4. Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
 
 5. Add version control and save your progress on Github:
-   - Create a Github Repo: [https://github.com/new](https://github.com/new)
+   - Create a private Github Repo: [https://github.com/new](https://github.com/new)
    - Initialize the code with Git then push it to Github:
 
 ```bash
 git init
 git remote add origin <your-github-url>
 git branch -M main
+git add .
+git commit -m 'Adding the template code to my repo'
 git push -u origin main
 ```
 
 6. Create shareable URLs for your web application, synced with Github.
    - Import your Git Repository into Vercel: [https://vercel.com/new](https://vercel.com/new)
      - You will need the Vercel application added to your Github account
+     - Then copy and paste your environment variables from `.env.local` in before you click deploy
+      <img width="500" alt="Screenshot 2024-05-22 at 6 19 59 PM" src="https://github.com/willschneider15/nextsaas/assets/44822021/8df5bc79-8576-4eff-9cbf-39d48693f2a8">
 
-7. In Vercel under Project > Settings > Environment Variables
-   - Click the import .env button and select the updated `.env.local` file in your project.
-
-8. Now if you redeploy in Vercel you should see a deployed URL for your project. 
-   - Also when you push new commits to Github it should sync those changes to deployed URLs. 
+7. Start playing with creating new branches for version control
 
 ## Firebase Install Stripe Plugin
 ### Take your time Stripe is the hardest part to setup
@@ -189,8 +189,23 @@ git push -u origin main
           - `components/dashboard/settings/Billing.tsx`: Manage your purchases on /billing page
     2. Review and update your pricing table to match your needs: `components/payments/Pricing.tsx`
 
-## Important Files
+## Going to production
+    1. Ensure you have tested and reviewed your application, marketing page, terms of service and privacy policy.
+      - Terms of service: <your-url>/#terms-of-service
+      - Privacy policy: <your-url>/#privacy-policy
+    2. Create a prod environment to keep things separate for testing
+       - Create new Firebase project 
+       - Configure the stripe plugin again with your live webhook and products
+       - Add prod stripe product IDs to `stripe/config.ts`
+       - Add your prod .env vars to `env.local` and vercel env vars
+    3. In the stripe dashboard make sure you have updated your branding and profile to use live payments.
+    4. Look into bill-capping and billing notification in your cloud providers
+       - Vercel: https://vercel.com/docs/pricing/spend-management#pausing-projects
+       - Firebase / GCP: https://medium.com/@steffenjanbrouwer/how-to-set-a-hard-payment-spending-cost-limits-for-google-cloud-platform-projects-d4fee7550d42
+    5. Merge all production code into your main branch
+    6. Update your custom domain DNS to point to your prod webapp
 
+## Important Files
 ### APP
 - `app/page.tsx` : The landing page for marketing
 - `app/dashboard/page.tsx` : The dashboard page
@@ -204,20 +219,25 @@ git push -u origin main
 
 ### Components
 - `components/auth/GuardAccess.tsx` : Component used to protect child components from unauthenticated users
-- `components/auth/PaidAccess.tsx` : Component used to protect child components from unpaid users
+- `components/payments/PaidAccess.tsx` : Component used to protect child components from unpaid users
+- `components/auth/ForgotPasswordModal.tsx` : Modal that pops up when a user clicks forgot password
 - `components/auth/Login.tsx` : The login component
 - `components/auth/SignUp.tsx` : The signup component
 - `components/auth/RouteUser.tsx`: Route logged in users to the dashboard page from landing, login, and signup pages
-- `components/dashboard/settings/Billing.tsx` : Component to manage your purchases
-- `components/dashboard/settings/Security.tsx`: Component to update your password
+- `components/dashboard/Layout.tsx` : Combines the Sidebar and Header in a responsive dashboard layout
 - `components/dashboard/Sidebar.tsx` : Used to navigate
 - `components/dashboard/Header.tsx` : Shows the current page and user profile
 - `components/dashboard/NavLink.tsx` : Highlights the active link in the Sidebar
+- `components/dashboard/settings/Billing.tsx` : Component to manage your purchases
+- `components/dashboard/settings/Security.tsx`: Component to update your password
+- `components/legal/PrivacyPolicyModal.tsx` : Modal that has the privacy policy for your app
+- `components/legal/TermsOfServiceModal.tsx` : Modal that has the terms of service for your app
 - `components/examples/FirebasePosts.tsx` : Component for an example of how to do CRUD with Firestore
 - `components/examples/StripeTesting.tsx` : Component for an example of querying all the products in Stripe dynamically
 - `components/examples/Welcome.tsx` : Component to introduce developers to the template
 - `components/landing/Header.tsx` : Component for the header of the landing page
 - `components/landing/Hero.tsx` : Component for the hero of the landing page
+- `components/landing/Footer.tsx` : Component for the footer of the landing page
 - `components/payments/Pricing.tsx` : Component to view the pricing table
 - `components/ui` : Default from shadcn/ui
 
@@ -239,17 +259,6 @@ git push -u origin main
 - `stripe/createPortal.ts` : Creates the temporary stripe link for users to manage their purchases
 - `stripe/pricing.ts` : Creates helper functions related to pricingIDs
 - `stripe/products.ts` : Creates helper functions related to productIDs
-
-
-## Deployment
-
-1. Include your environment variables in Vercel:
- <img width="500" alt="Screenshot 2024-05-22 at 6 19 59 PM" src="https://github.com/willschneider15/nextsaas/assets/44822021/8df5bc79-8576-4eff-9cbf-39d48693f2a8">
-
-2. Add all your changes to Github
-`$ git add . `
-`$ git commit -m <message>`
-`$ git push` - If it errors copy and paste suggestion
 
 ## Continue Building
 

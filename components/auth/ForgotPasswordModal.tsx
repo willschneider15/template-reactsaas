@@ -6,6 +6,7 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import Notification from '@/components/ui/Notification'; 
 import emailPasswordReset from '@/firebase/auth/forgotPassword';
+// TODO: Try to carry over the state of the email from input in login component
 
 interface ForgotPasswordModalProps {
     isOpen: boolean;

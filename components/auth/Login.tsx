@@ -6,7 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useRouter } from "next/navigation";
 import Notification from '@/components/ui/Notification';
-import ForgotPasswordModal from "@/components/auth/ForgotPassword";
+import ForgotPasswordModal from "@/components/auth/ForgotPasswordModal";
 import Image from "next/image";
 import Link from "next/link";
 import signIn from "@/firebase/auth/signin";

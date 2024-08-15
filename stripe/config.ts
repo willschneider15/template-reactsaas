@@ -1,4 +1,6 @@
 // Config for you Stripe products in dev and prod
+
+// Stripe Pricing IDs are safe to expose on the client side
 interface Product {
     pricingId: string;
     type: "one-time" | "recurring";
@@ -7,7 +9,7 @@ interface Product {
 // Can add or remove products (e.g one or three options)
 export const dev_products: Product[] = [
     {
-        pricingId: "price_1PVS2oINqvSrNcSJFvDDuHux",
+        pricingId: "price_1PVS2oINqvSrNcSJFvDDuHux", // UPDATE THESE IDs
         type: "one-time", // one-time or recurring
     },
     {
@@ -19,11 +21,11 @@ export const dev_products: Product[] = [
 // Goto typings to switch from dev to prod in the app
 export const prod_products: Product[] = [
     {
-        pricingId: "<update>",
+        pricingId: "price_1Po6aXINqvSrNcSJNWDNqTFR", // UPDATE THESE IDs
         type: "one-time", // one-time or recurring
     },
     {
-        pricingId: "<update>",
+        pricingId: "price_1Po6bEINqvSrNcSJjacxNw9S",
         type: "recurring",
     },
 ];
