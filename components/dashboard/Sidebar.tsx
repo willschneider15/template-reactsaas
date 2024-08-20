@@ -11,7 +11,7 @@ export default function Sidebar() {
                 <div className="flex h-[60px] items-center px-6">
                     <Link className="flex items-center gap-2 font-semibold" href="#">
                         {/* <Image src="/logo.webp" alt="Logo" width="32" height="32" /> */}
-                        <p>React Saas</p>
+                        <p>React Saas - Template</p>
                     </Link>
                 </div>
                 <div className="flex-1">
