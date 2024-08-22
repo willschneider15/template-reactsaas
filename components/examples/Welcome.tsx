@@ -4,7 +4,6 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Checkbox } from "@/components/ui/checkbox"
 import { Label } from "@/components/ui/label"
 import Link from "next/link"
-// TODO: Update review documentation link to nextsaas url for docs
 
 export default function Welcome() {
     return (
