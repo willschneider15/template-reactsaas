@@ -63,7 +63,7 @@ export default function Pricing() {
                         </CardContent>
                         <CardFooter>
                             <Button
-                                className="w-full shadow-lg hover:shadow-blue-500/50"
+                                className="w-full shadow-lg"
                                 onClick={() => createCheckout(button_one.pricingId, button_one.type)}
                                 disabled={buttonLoading === button_one.pricingId}
                             >
@@ -101,7 +101,7 @@ export default function Pricing() {
                         </CardContent>
                         <CardFooter>
                             <Button
-                                className="w-full shadow-lg hover:shadow-blue-500/50"
+                                className="w-full shadow-lg"
                                 onClick={() => createCheckout(button_two.pricingId, button_two.type)}
                                 disabled={buttonLoading === button_two.pricingId}
                             >
