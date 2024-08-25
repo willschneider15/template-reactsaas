@@ -1,5 +1,6 @@
 #!/bin/bash
 # Beta version of setup.sh tested on MacOS
+# Run this first: $ chmod +x setup.sh
 
 # Colors
 RED='\033[0;31m'
@@ -77,11 +78,12 @@ get_project_id() {
 clear
 section_header "Welcome to the React SaaS Template Setup Script"
 styled_echo $GREEN "This script will guide you through setting up your SaaS project for both development and production environments."
-
+echo
+styled_echo $GREEN "Reccomend referring to: https://www.reactsaas.net/docs as you go through the setup."
 
 # Step 0: Dependencies
 section_header "Step 0: Checking Dependencies"
-styled_echo $YELLOW "Please ensure you have npm and git installed on your machine."
+styled_echo $YELLOW "Please ensure you have Node.js and Git installed on your machine."
 echo
 styled_echo $YELLOW "Press Enter to continue..."
 read -p ""

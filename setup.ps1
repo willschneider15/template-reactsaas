@@ -1,5 +1,5 @@
 # Beta version of setup.ps1 tested on Windows
-# May need to run this: Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process
+# Run this first: $ Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process
 
 # Define colors
 $RED = [ConsoleColor]::Red
@@ -101,10 +101,12 @@ function Get-Project-ID {
 Clear
 Section-Header "Welcome to the React SaaS Template Setup Script"
 Styled-Echo "This script will guide you through setting up your SaaS project for both development and production environments." -Color $GREEN
+Write-Host
+Styled-Echo "Reccomend referring to: https://www.reactsaas.net/docs as you go through the setup." -Color $GREEN
 
 # Step 0: Dependencies
 Section-Header "Step 0: Checking Dependencies"
-Styled-Echo "Please ensure you have npm and git installed on your machine." -Color $YELLOW
+Styled-Echo "Please ensure you have Node.js and Git installed on your machine." -Color $YELLOW
 Styled-Echo "Press Enter to continue..." -Color $YELLOW
 Read-Host
 
