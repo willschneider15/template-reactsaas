@@ -14,7 +14,10 @@ export default function DashboardPage() {
     return (
         <GuardAccess>
             <DashBoardLayout name="Dashboard">
-                <Welcome/>
+            {/* Uncomment the PaidAccess if you only want paid users to view the welcome */}
+                {/* <PaidAccess pricingIds={[product_one]}> */}
+                    <Welcome />
+                {/* </PaidAccess> */}
                 <PaidAccess pricingIds={[product_one]} unPaid={true}>
                     <Pricing/>
                 </PaidAccess>
