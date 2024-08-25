@@ -27,13 +27,27 @@
    ```bash
    cd <project-directory>
    ```
+   - Optional: Run setup script to get started fast or continue manually
+     - MacOs: setup.sh
+      ```bash
+        chmod +x setup.sh
+        ./setup.sh
+      ```
+     - Windows: setup.ps1
+      ```powershell
+        Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process
+        .\setup.ps1
+      ```
 
 2. Set up your development environment variables:
    - Copy the contents of **env.example** to a new file named **.env.local**
    - Create a Firebase account at https://firebase.google.com/
    - Create a new Firebase project for your app's development environment
-   - In Firebase console, go to Project Overview > Add app
+     - Suggested name: <project>-dev
+     - Do not need Firebase hosting
+   - In Firebase console, go to Project Overview > Add app > Web
    - Copy the configuration values provided
+     - Everything inside the brackets of firebaseConfig
    - Paste these values into your **.env.local** file, replacing the placeholders
      - Ensure all variable names are in uppercase and prefixed with NEXT_PUBLIC_
      - Reference: https://nextjs.org/docs/pages/building-your-application/configuring/environment-variables
@@ -46,7 +60,7 @@
      - Go to Firestore Database > Rules
      - Replace the default rules with the following template for user-specific data access control:
 
-4. Add the following Firestore security rules to your Firebase project:
+4. Under Firestore security rules add the following in place of the default rules:
 
     ```
     service cloud.firestore {
@@ -96,6 +110,7 @@
 7. Create your production environment:
    - Repeat steps 2-4 to set up your production environment
    - Create a separate prod Firebase project
+     - Suggested name: <project>-prod
    - Update **.env.local** with the production environment variables
 
 8. Add version control and save your progress on Github:
