@@ -113,6 +113,7 @@ Read-Host
 # Step 1: Set up environment variables
 Section-Header "Step 1: Setting Up Environment Variables"
 Styled-Echo "We need Firebase environment variables for your dev and prod environments." -Color $YELLOW
+Styled-Echo "Create new projects: https://console.firebase.google.com for dev and prod." -Color $BLUE
 
 # Parse DEV environment
 Styled-Echo "Setting up DEV environment..." -Color $BLUE
