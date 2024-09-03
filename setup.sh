@@ -92,6 +92,7 @@ read -p ""
 # Step 1: Set up environment variables
 section_header "Step 1: Setting Up Environment Variables"
 styled_echo $YELLOW "We need Firebase environment variables for your dev and prod environments."
+styled_echo $BLUE "Create new projects: https://console.firebase.google.com for dev and prod."
 
 # Parse DEV environment
 echo
