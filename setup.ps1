@@ -139,7 +139,7 @@ Parse-Firebase-Config "PROD"
 
 # Add ENVIRONMENT variable
 Add-Content -Path .env.local -Value "# Select Environment: DEV or PROD"
-Add-Content -Path .env.local -Value "ENVIRONMENT=DEV"
+Add-Content -Path .env.local -Value "NEXT_PUBLIC_ENVIRONMENT=DEV"
 Styled-Echo "Environment variables set up successfully." -Color $GREEN
 
 # Read project IDs

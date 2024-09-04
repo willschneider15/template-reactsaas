@@ -121,7 +121,7 @@ parse_firebase_config "PROD"
 
 # Add ENVIRONMENT variable
 echo "# Select Environment: DEV or PROD" >> .env.local
-echo "ENVIRONMENT=DEV" >> .env.local
+echo "NEXT_PUBLIC_ENVIRONMENT=DEV" >> .env.local
 styled_echo $GREEN "✓ Environment variables set up successfully."
 
 # Read project IDs
