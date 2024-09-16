@@ -94,6 +94,7 @@ export default function Billing() {
                                 <p className="text-muted-foreground">
                                 {/* You can display additional product details here if you want */}
                                 ${product.price} 
+                                {(product.type === "recurring" ? "/month" : "")}
                                 </p>
                             </div>
                             {activeProducts.includes(product.productId) ? (
