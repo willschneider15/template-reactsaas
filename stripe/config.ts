@@ -21,11 +21,11 @@ export const dev_products: Product[] = [
 // Goto typings to switch from dev to prod in the app
 export const prod_products: Product[] = [
     {
-        pricingId: "price_1Po6aXINqvSrNcSJNWDNqTFR", // UPDATE THESE IDs
+        pricingId: "price_1Pz2SaINqvSrNcSJ6ZJRsZWJ", // UPDATE THESE IDs
         type: "one-time", // one-time or recurring
     },
     {
-        pricingId: "price_1Po6bEINqvSrNcSJjacxNw9S",
+        pricingId: "price_1Pz7MHINqvSrNcSJVQ4ykBrz",
         type: "recurring",
     },
 ];
