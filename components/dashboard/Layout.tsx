@@ -15,7 +15,7 @@ export default function DashBoardLayout({
     name, // Add this line
 }: Readonly<DashBoardLayoutProps>) {
     return (
-        <div className="h-screen flex overflow-hidden">
+        <div className="h-screen flex overflow-hidden bg-background">
             <div className="hidden lg:block fixed lg:w-[280px] h-full">
                 <Sidebar />
             </div>

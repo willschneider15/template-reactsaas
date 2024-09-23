@@ -30,7 +30,7 @@ export default function Pricing() {
         <section className="w-full py-12 md:py-24 lg:py-32 overflow-hidden">
             <div className="container grid gap-8 px-4 md:px-6 max-w-4xl mx-auto">
                 <div className="grid gap-2 text-center mx-auto">
-                    <h2 className="text-3xl font-bold tracking-tighter md:text-4xl md:leading-tight">Pricing</h2>
+                    <h2 className="text-3xl text-foreground font-bold tracking-tighter md:text-4xl md:leading-tight">Pricing</h2>
                     <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl md:leading-relaxed lg:text-base lg:leading-relaxed xl:text-xl xl:leading-relaxed">
                         Choose the plan that best fits your needs. No hidden fees, ever.
                     </p>
@@ -40,27 +40,26 @@ export default function Pricing() {
                     </div>
                 </div>
                 <div className="grid md:grid-cols-2 gap-6">
-                    <Card className="flex flex-col justify-between">
+                    <Card className="flex flex-col justify-between bg-card border-border">
                         <CardHeader> {/* Title, Description, Features, and Call To Action Button */}
-                            <CardTitle>Start</CardTitle>
-                            <CardDescription className='text-md'>Get lifetime access to our SaaS template.</CardDescription>
-                            
+                            <CardTitle>One-Time</CardTitle>
+                            <CardDescription className='text-md'>Pay once and get lifetime access.</CardDescription>
                         </CardHeader>
                         <CardContent className="grid gap-4">
                             <div className="text-4xl font-bold">
-                                <span className="line-through text-gray-400 text-lg mr-2">$99</span>
+                                <span className="line-through text-muted-foreground text-2xl mr-2">$99</span>
                                 $49
                             </div>
                             <ul className="grid gap-2 text-md">
-                                <li><CheckIcon className="mr-2 inline-block h-4 w-4 text-green-500" />Free updates for life</li>
-                                <li><CheckIcon className="mr-2 inline-block h-4 w-4 text-green-500" />In-depth documentation</li>
-                                <li><CheckIcon className="mr-2 inline-block h-4 w-4 text-green-500" />Easy deployment</li>
-                                <li><CheckIcon className="mr-2 inline-block h-4 w-4 text-green-500" />Customizable example components</li>
-                                <li><CheckIcon className="mr-2 inline-block h-4 w-4 text-green-500" />Responsive design</li>
-                                <li><CheckIcon className="mr-2 inline-block h-4 w-4 text-green-500" />One-time and recurring payments</li>
-                                <li><CheckIcon className="mr-2 inline-block h-4 w-4 text-green-500" />Dashboard layout</li>
-                                <li><CheckIcon className="mr-2 inline-block h-4 w-4 text-green-500" />Unlimited access to all features</li>
-                                <li><XIcon className="mr-2 inline-block h-4 w-4 text-gray-400" />Priority support</li>
+                                <li><CheckIcon className="mr-2 inline-block h-4 w-4 text-green-500" />[1. Value Proposition]</li>
+                                <li><CheckIcon className="mr-2 inline-block h-4 w-4 text-green-500" />[2. Value Proposition]</li>
+                                <li><CheckIcon className="mr-2 inline-block h-4 w-4 text-green-500" />[3. Value Proposition]</li>
+                                <li><CheckIcon className="mr-2 inline-block h-4 w-4 text-green-500" />[4. Value Proposition]</li>
+                                <li><CheckIcon className="mr-2 inline-block h-4 w-4 text-green-500" />[5. Value Proposition]</li>
+                                <li><CheckIcon className="mr-2 inline-block h-4 w-4 text-green-500" />[6. Value Proposition]</li>
+                                <li><XIcon className="mr-2 inline-block h-4 w-4 text-gray-400" />[7. Value Missing In This Plan]</li>
+                                <li><XIcon className="mr-2 inline-block h-4 w-4 text-gray-400" />[8. Value Missing In This Plan]</li>
+                                <li><XIcon className="mr-2 inline-block h-4 w-4 text-gray-400" />[9. Value Missing In This Plan]</li>
                             </ul>
                         </CardContent>
                         <CardFooter>
@@ -73,28 +72,28 @@ export default function Pricing() {
                             </Button>
                         </CardFooter>
                     </Card>
-                    <Card className="flex flex-col justify-between">
+                    <Card className="flex flex-col justify-between border-border">
                         <CardHeader> {/* Second product option */}
-                            <CardTitle>Mentorship</CardTitle>
+                            <CardTitle>Subscription</CardTitle>
                             <CardDescription className='text-md'>
-                                Get our help to launch your SaaS fast.
+                                Subscribe for monthly access.
                             </CardDescription>
                         </CardHeader>
                         <CardContent className="grid gap-4">
                             <div className="text-4xl font-bold">
-                                <span className="line-through text-gray-400 text-lg mr-2">$199</span>
+                                <span className="line-through text-muted-foreground text-lg mr-2">$199</span>
                                 $99/month
                             </div>
                             <ul className="grid gap-2 text-md">
-                                <li><CheckIcon className="mr-2 inline-block h-4 w-4 text-green-500" />Monthly 1-on-1 calls</li>
-                                <li><CheckIcon className="mr-2 inline-block h-4 w-4 text-green-500" />Private Discord access</li>
-                                <li><CheckIcon className="mr-2 inline-block h-4 w-4 text-green-500" />Personalized goal tracking</li>
-                                <li><CheckIcon className="mr-2 inline-block h-4 w-4 text-green-500" />Custom roadmap creation</li>
-                                <li><CheckIcon className="mr-2 inline-block h-4 w-4 text-green-500" />Code reviews</li>
-                                <li><CheckIcon className="mr-2 inline-block h-4 w-4 text-green-500" />Tailored resources and tools</li>
-                                <li><CheckIcon className="mr-2 inline-block h-4 w-4 text-green-500" />Networking opportunities</li>
-                                <li><CheckIcon className="mr-2 inline-block h-4 w-4 text-green-500" />Pause or cancel anytime</li>
-                                <li><CheckIcon className="mr-2 inline-block h-4 w-4 text-green-500" />Priority support</li>
+                                <li><CheckIcon className="mr-2 inline-block h-4 w-4 text-green-500" />[1. Value Proposition]</li>
+                                <li><CheckIcon className="mr-2 inline-block h-4 w-4 text-green-500" />[2. Value Proposition]</li>
+                                <li><CheckIcon className="mr-2 inline-block h-4 w-4 text-green-500" />[3. Value Proposition]</li>
+                                <li><CheckIcon className="mr-2 inline-block h-4 w-4 text-green-500" />[4. Value Proposition]</li>
+                                <li><CheckIcon className="mr-2 inline-block h-4 w-4 text-green-500" />[5. Value Proposition]</li>
+                                <li><CheckIcon className="mr-2 inline-block h-4 w-4 text-green-500" />[6. Value Proposition]</li>
+                                <li><CheckIcon className="mr-2 inline-block h-4 w-4 text-green-500" />[7. Value Proposition]</li>
+                                <li><CheckIcon className="mr-2 inline-block h-4 w-4 text-green-500" />[8. Value Proposition]</li>
+                                <li><CheckIcon className="mr-2 inline-block h-4 w-4 text-green-500" />[9. Value Proposition]</li>
                             </ul>
                         </CardContent>
                         <CardFooter>

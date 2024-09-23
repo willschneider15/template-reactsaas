@@ -6,12 +6,12 @@ import NavLink from "@/components/dashboard/NavLink";
 
 export default function Sidebar() {
     return (
-        <div className="h-full overflow-y-auto bg-gray-100 lg:bg-gray-100/40 lg:border-r lg:block dark:bg-gray-800/40">
+        <div className="h-full overflow-y-auto lg:border-r lg:block bg-secondary">
             <div className="flex flex-col gap-2">
                 <div className="flex h-[60px] items-center px-6">
                     <Link className="flex items-center gap-2 font-semibold" href="#">
                         {/* <Image src="/logo.webp" alt="Logo" width="32" height="32" /> */}
-                        <p>React Saas - Template</p>
+                        <p className="text-foreground">React Saas - Template</p>
                     </Link>
                 </div>
                 <div className="flex-1">

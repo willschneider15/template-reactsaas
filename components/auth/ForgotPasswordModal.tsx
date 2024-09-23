@@ -39,16 +39,16 @@ const ForgotPasswordModal: React.FC<ForgotPasswordModalProps> = ({ isOpen, onClo
     }
 
     return (
-        <div className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-black bg-opacity-80 p-4">
-            <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md relative">
+        <div className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-black bg-opacity-70 p-4">
+            <div className="bg-background p-8 rounded-lg shadow-lg w-full max-w-md relative">
                 <button
                     onClick={onClose}
-                    className="absolute top-4 right-4 text-gray-500 hover:text-gray-700"
+                    className="absolute top-4 right-4 text-foreground hover:text-foreground-muted"
                     aria-label="Close"
                 >
                     &#x2715; {/* This represents the "X" symbol */}
                 </button>
-                <h2 className="text-2xl font-bold mb-4">Forgot Password</h2>
+                <h2 className="text-2xl text-foreground font-bold mb-4">Forgot Password</h2>
                 <form onSubmit={handleFormSubmit}>
                     <div className="grid gap-4">
                         <div className="grid gap-2">

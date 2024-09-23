@@ -63,7 +63,7 @@ export default function Posts() {
     }, [userId, fetchPosts]);
 
     return (
-        <div className="overflow-x-auto dark:bg-gray-950 rounded-lg border overflow-hidden m-5 md:m-10 p-10">
+        <div className="overflow-x-auto bg-card rounded-lg border border-border overflow-hidden m-5 md:m-10 p-10">
             <Table>
                 <TableHeader>
                     <TableRow>
@@ -75,8 +75,8 @@ export default function Posts() {
                 <TableBody>
                     {posts.map((post, index) => (
                       <TableRow key={index}>
-                          <TableCell>{post.name}</TableCell>
-                          <TableCell>{post.description}</TableCell>
+                          <TableCell className="text-foreground">{post.name}</TableCell>
+                          <TableCell className="text-foreground">{post.description}</TableCell>
                           <TableCell>
                               <div className="flex space-x-2">
                                   <Button variant="secondary" onClick={() => handleUpdate(post.id!, { name: "Updated Name" })}>
