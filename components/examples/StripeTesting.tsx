@@ -76,11 +76,11 @@ export default function StripeTesting() {
     }, []);
 
     if (loading) {
-        return <div></div>; // Could a loading spinner here
+        return <div></div>; // Could add loading spinner here
     }
 
     return (
-            <Card className="m-5 md:m-10 p-10">
+            <Card className="m-5 md:m-10 p-10 border-border">
                 <CardHeader>
                 <CardTitle>All Stripe Products</CardTitle>
                 <CardDescription>View all the products dynamically from stripe</CardDescription>

@@ -20,8 +20,8 @@ const NavLink: React.FC<NavLinkProps> = ({ href, icon, children }) => {
             href={href}
             className={`flex items-center gap-3 rounded-lg px-3 py-2 transition-all ${
                 isActive(href)
-                    ? "bg-gray-200 lg:bg-gray-100 text-gray-900 dark:bg-gray-800 dark:text-gray-50"
-                    : "text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
+                    ? "bg-card shadow-lg border-border text-card-foreground"
+                    : "hover:text-card-foreground text-muted-foreground"
             }`}
         >
             {icon}

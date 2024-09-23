@@ -39,16 +39,16 @@ export default function Header(props: any) {
 	};
     
     return ( 
-        <header className="sticky top-0 z-10 flex h-14 lg:h-[60px] items-center border-b bg-gray-100/40 px-6 dark:bg-gray-800/40">
+        <header className="sticky top-0 z-10 flex h-14 lg:h-[60px] items-center border-b border-border px-6 bg-secondary">
 			<div
-				className="z-20 text-2xl pb-1 pl-2 text-black rounded lg:hidden cursor-pointer"
+				className="z-20 text-2xl pb-1 pl-2 text-foreground rounded lg:hidden cursor-pointer"
 				onClick={toggleSidebar}
 			>
 				☰
 			</div>
 
 			<div className="flex-1 ">
-				<h1 className="font-semibold text-lg text-center lg:text-left">{props.Name}</h1>
+				<h1 className="text-foreground font-semibold text-lg text-center lg:text-left">{props.Name}</h1>
 			</div>
 			<DropdownMenu>
             <DropdownMenuTrigger asChild>
@@ -69,7 +69,7 @@ export default function Header(props: any) {
 					<span className="sr-only">Toggle user menu</span>
 				</button>
             </DropdownMenuTrigger>
-            <DropdownMenuContent align="end">
+            <DropdownMenuContent align="end" className="border-border">
 				<DropdownMenuLabel>{email ? email : "My Account"}</DropdownMenuLabel>
 				<DropdownMenuSeparator />
 				<DropdownMenuItem className="cursor-pointer" onClick={routeSecurity} >
@@ -91,7 +91,7 @@ export default function Header(props: any) {
 		{/* Sidebar (conditionally rendered for mobile/tablet) */}
 		{isSidebarOpen && (
 			<div className="fixed inset-0 z-20 flex">
-				<div className="flex bg-gray-100 w-[70vw] p-4">
+				<div className="flex bg-secondary w-[70vw] p-4">
 					<div className="w-full">
 						<Sidebar />
 					</div>

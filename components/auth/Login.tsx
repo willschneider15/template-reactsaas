@@ -48,30 +48,31 @@ export default function Login() {
                   className="mx-auto grid w-[350px] gap-6"
               >
                 <div className="grid gap-2 text-center">
-                    <h1 className="text-3xl font-bold">Login</h1>
+                    <h1 className="text-3xl text-foreground font-bold">Login</h1>
                     <p className="text-balance text-muted-foreground">
                         Enter your email below to login to your account
                     </p>
                 </div>
                 <div className="grid gap-4">
                     <div className="grid gap-2">
-                        <Label htmlFor="email">Email</Label>
+                        <Label className="text-foreground" htmlFor="email">Email</Label>
                         <Input
                             id="email"
                             type="email"
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
                             placeholder="m@example.com"
+                            className="text-foreground"
                             required
                         />
                     </div>
                     <div className="grid gap-2">
                         <div className="flex items-center">
-                            <Label htmlFor="password">Password</Label>
+                            <Label  className="text-foreground" htmlFor="password">Password</Label>
                             <button
                                 type="button"
                                 onClick={() => setIsForgotPasswordOpen(true)}
-                                className="ml-auto inline-block text-sm underline"
+                                className="ml-auto inline-block text-sm underline text-muted-foreground"
                             >
                                 Forgot your password?
                             </button>
@@ -81,6 +82,7 @@ export default function Login() {
                           type="password"
                           value={password}
                           onChange={(e) => setPassword(e.target.value)}
+                          className="text-foreground"
                           required
                       />
                     </div>
@@ -88,7 +90,7 @@ export default function Login() {
                         Login
                     </Button>
                 </div>
-                <div className="mt-4 text-center text-sm">
+                <div className="mt-4 text-center text-sm text-muted-foreground">
                     Don&apos;t have an account?{" "}
                     <Link href="/signup" className="underline">
                         Sign up

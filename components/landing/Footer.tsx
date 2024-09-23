@@ -29,7 +29,7 @@ const Footer: React.FC = () => {
 
     return (
         <div>
-            <footer className="w-full py-12 text-black">
+            <footer className="w-full py-12 text-foreground">
                 <div className="container mx-auto px-6 md:px-8">
                     <div className="flex flex-col items-center space-y-4 md:flex-row md:justify-between md:space-y-0">
                         <div className="text-center md:text-left">
