@@ -2,6 +2,7 @@
 
 [Gitbook Docs](https://will-schneider.gitbook.io/react-saas)
 
+
 ## Who This Template Is For
 This template is designed specifically for beginners who want to build a SaaS application without dealing with:
 - Server management
@@ -349,3 +350,5 @@ To learn more about the stack:
 ### Troubleshooting
 
   - Try refreshing your browser, sometimes on localhost the state needs force updated.
+
+[Buy Me a Coffee](buymeacoffee.com/suppa)
