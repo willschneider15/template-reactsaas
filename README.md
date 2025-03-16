@@ -1,5 +1,26 @@
 ![Diagram](https://storage.googleapis.com/images-reactsaas/diagram_bg.png)
 
+[Gitbook Docs](https://will-schneider.gitbook.io/react-saas)
+
+## Who This Template Is For
+This template is designed specifically for beginners who want to build a SaaS application without dealing with:
+- Server management
+- Authentication systems
+- Containerization
+- Payment provider integration
+If you're looking to rapidly build and deploy a web application with minimal infrastructure concerns, you've come to the right place.
+
+## Disclaimer
+While this template offers significant advantages in terms of speed and simplicity, it's important to understand the trade-offs:
+- **Vendor Dependency:** This template relies heavily on Firebase, which is a wrapper on top of Google Cloud. This creates some level of vendor lock-in that may complicate future migrations.
+- **Proprietary Technologies:** Firebase Auth and Firestore database are not open-source technologies, which can make data migration challenging if you decide to switch providers later.
+- **Serverless Scaling Concerns:** The serverless architecture provides nearly unlimited scaling capabilities, but this can lead to unexpected billing if you don't properly monitor usage or implement protection against potential attacks.
+  
+If you are looking to leverage open-source technologies and avoid unexpected bills feel free to read my recommendations under: 
+- [Continued learning](https://will-schneider.gitbook.io/react-saas/further-learning)
+
+I built this template as a way to reinforce my learning after launching my first SaaS application. I hope it serves as a helpful starting point on your own development journey.
+
 ## Features
 
 - Landing Page
