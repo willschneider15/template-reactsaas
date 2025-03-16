@@ -33,7 +33,7 @@ export default function Hero() {
                     <HeroVideoDialog
                         className="block"
                         animationStyle="from-center"
-                        videoSrc="https://www.youtube.com/embed/JIoNQ4wDjXQ?si=aSEea253tWriFzvQ&autoplay=1"
+                        videoSrc="https://www.youtube.com/embed/Y_-z3tXfPBw?si=5CYh66VhHaGwgAYq&autoplay=1"
                         thumbnailSrc="/dashboard-screenshot.webp"
                         thumbnailAlt="Hero Video"
                     />
